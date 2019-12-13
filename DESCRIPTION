@@ -1,0 +1,41 @@
+Package: parsetools
+Title: Tools for building parsers with R
+Version: 0.0.1
+Authors@R: 
+    person("Taras", "Zakharko",
+           role = c("aut", "cre"),
+           email = "taras.zakharko@gmail.com",
+           comment = c(ORCID = "https://orcid.org/0000-0001-7601-8424"))
+Description: This package provides a modular infrastructure for building
+    ergonomic text parsers. It implements a lightweight consumable text 
+    buffer with value semantics and facility to generate flexible parsers
+    from a formal description. Parser performance is not a focus of this
+    package, as it is primarily meant for prototyping parsers and creating
+    compact DSLs.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.0.1
+Suggests: 
+    spelling,
+    testthat (>= 2.1.0)
+Language: en-US
+Imports: 
+    glue (>= 1.3.1),
+    stringr (>= 1.4.0),
+    crayon (>= 1.3.4),
+    magrittr,
+    purrr(>= 0.3.2),
+    assertthat (>= 0.2.1),
+    rlang (>= 0.4.1),
+    zeallot (>= 0.1.0)
+Collate: 
+    'grammar-ast.R'
+    'utils.R'
+    'grammar-decl.R'
+    'grammar-machine.R'
+    'grammar-compiler.R'
+    'src-buffer.R'
+    'parser-base.R'
+    'utils-pipe.R'

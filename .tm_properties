@@ -1,0 +1,7 @@
+showInvisibles   = true
+tabSize          = 2
+softTabs         = true
+wrapColumn       = 100
+showWrapColumn   = true
+softWrap         = false
+windowTitle      = "$TM_DISPLAYNAME — parsetools"
