@@ -794,7 +794,7 @@ make.next.reporter <- function(stack) {
 # ===================================================
 
 
-rlang_eval <- rlang:::rlang_eval
+#rlang_eval <- rlang:::rlang_eval
 
 .recursion.failure <- new.env(parent=emptyenv())
 
@@ -813,9 +813,7 @@ rlang_eval <- rlang:::rlang_eval
     # fetch
     instruction <- program[[pic]]
     # execute
-    #fmt_print("[{pic}] {format(instruction, as.matrix=FALSE)} $${deparse(location$line)}")
-    .Call(rlang_eval, parser.instruction.table[[instruction[[1]]]], currentenv)
-    #print(value)
+    eval_bare(parser.instruction.table[[instruction[[1]]]], currentenv)
   }
   
   # print(value)
