@@ -38,14 +38,14 @@ NULL
 #' @rdname src.buffer
 #' @return A buffer location to the start of the newly created buffer
 #' @export
-src.buffer <- function(file, text) {
+src.buffer <- function(file, text, filename=NULL) {
   assert_that(xor(missing(text), missing(file)) , msg="src.buffer() must specify either file or text, but not both")
   
   if(missing(text)) {
     text <- readLines(file, warn=FALSE)
-    fname <- if(is.character(file)) file else NULL
+    fname <- if(is.character(file)) file else filename
   } else {
-    fname <- NULL
+    fname <- filename
   }
     
   # the environment that holds the buffer data
